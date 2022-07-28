@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Pre entrega final - simulador</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="shortcut icon" href="../css/img/logo1.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/f4d2f9e231.js" crossorigin="anonymous"></script>
+</head>
+<body p-2>
+    <nav class="container">
+        <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html"><img src="../css/img/logo2.png" alt="CASH ONLINE" width="62"></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-white " href="#">Nuestras sucursales</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="premios.html">Gana YA</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white " href="#">Nosotros</a>
+              </li>
+          </ul>
+    </nav>
+   <header id="tit"></header>
+   <div class="container">
+    <div class="row" id="form">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="monto">Monto</label>
+                <input type="text" class="form-control" id="monto" placeholder="Ingresa monto">
+            </div>
+            <div class="form-group">
+                <label for="timpo">Tiempo</label>
+                <input type="text" class="form-control" id="tiempo" placeholder="Ingresa tiempo">
+            </div>
+            <div class="form-group">
+                <label for="interes">Interes</label>
+                <input type="text" class="form-control" id="interes" placeholder="Ingresa interes">
+            </div>
+            <div class="p-3 text-center d-grid gap-2 col-6 mx-auto">
+                <button type="submit" class="btn btn-primary" id="btncalcular">Calcular</button>
+                <button onclick="location.href = location.href" class="btn btn-primary" id="limpiar">Limpiar</button>
+            </div>
+            
+        </div>
+        <div class="col_6">
+            <table id="lista-tabla" class="table">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Cuota</th>
+                        <th>Capital</th>
+                        <th>Interes</th>
+                        <th>Saldo</th>
+                    </tr>
+                    <tbody></tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+   </div>
+   <script src="../js/main.js"></script>
+   <script src="../js/benef.js"></script>
+   <script src="../js/simulador.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
