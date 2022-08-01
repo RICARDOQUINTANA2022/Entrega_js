@@ -11,22 +11,27 @@
     <script src="https://kit.fontawesome.com/f4d2f9e231.js" crossorigin="anonymous"></script>
 </head>
 <body p-2>
-    <nav class="container">
-        <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html"><img src="../css/img/logo2.png" alt="CASH ONLINE" width="62"></a>
-            </li>
-            <li class="nav-item ">
-              <a class="nav-link text-white " href="#">Nuestras sucursales</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="premios.html">Gana YA</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white " href="#">Nosotros</a>
-              </li>
-          </ul>
-    </nav>
+  <nav class="container-fluid row">
+    <div class="col-md-11">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.html"><img src="../css/img/logo2.png" alt="CASH ONLINE" width="62"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white " href="#">Nuestras sucursales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="premios.html">Gana YA</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white " href="#">Nosotros</a>
+          </li>
+      </ul>
+    </div>
+    <div class="col-md-1 text-end">
+        <a href="#" id="beneficios_carrito"></a>
+    </div>
+  </nav>
    <header id="tit"></header>
    <div class="container">
     <div class="row" id="form">
@@ -39,10 +44,20 @@
                 <label for="timpo">Tiempo</label>
                 <input type="text" class="form-control" id="tiempo" placeholder="Ingresa tiempo">
             </div>
-            <div class="form-group">
-                <label for="interes">Interes</label>
-                <input type="text" class="form-control" id="interes" placeholder="Ingresa interes">
-            </div>
+            <div id="interes" class="p-3">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Credito en dolares
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Credito en pesos
+                    </label>
+                  </div>
+            </div> 
             <div class="p-3 text-center d-grid gap-2 col-6 mx-auto">
                 <button type="submit" class="btn btn-primary" id="btncalcular">Calcular</button>
                 <button onclick="location.href = location.href" class="btn btn-primary" id="limpiar">Limpiar</button>
