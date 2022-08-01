@@ -8,7 +8,7 @@ function guardarbeneficioscarritoLS(beneficios) {
 function actualizarbtncarrito() {
     let beneficios = obtenerbeneficioscarritoLS();
     let contenido = `<button type="button" class="btn btn-outline-ligh position-relative">
-            <img src="../css/img/regalo1.png" width="40">
+            <img src="./css/img/regalo1.png" width="40">
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               0 </span> </button>`;
     let total = 0;
