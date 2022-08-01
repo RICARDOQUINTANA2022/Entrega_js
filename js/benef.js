@@ -16,12 +16,7 @@ function obtenerbeneficiosLS() {
 function guardarbeneficiosLS(beneficios) {
     localStorage.setItem("beneficios", JSON.stringify(beneficios));
 }
-function obtenerbeneficioscarritoLS() {
-    return JSON.parse(localStorage.getItem("carrito")) || [];
-}
-function guardarbeneficioscarritoLS(beneficios) {
-    localStorage.setItem("carrito", JSON.stringify(beneficios));
-    }
+
 
 function renderbeneficios() {
     let beneficios = obtenerbeneficiosLS();
@@ -35,7 +30,7 @@ for (let beneficio of beneficios) {
         <div class="card-body">
        <h5 class="card-title text-center">${beneficio.descripcion}</h5>
        <p class="card-text text-center">${beneficio.condicion}</p>
-       <p class="card-text text-center"><a href="#" class="btn btn-primary" onclick="agregarcarrito(${beneficio.id})
+       <p class="card-text text-center"><a href="#" class="btn btn-primary" title="Agregar a premio seleccionado" onclick="agregarcarrito(${beneficio.id})
        ">Elegir</a></p>
       </div>
       </div>
@@ -43,28 +38,6 @@ for (let beneficio of beneficios) {
   }
   document.getElementById ("beneficios").innerHTML = todo
  }
-
- function actualizarbtncarrito() {
-    let beneficios = obtenerbeneficioscarritoLS();
-    let contenido = `<button type="button" class="btn btn-outline-ligh position-relative">
-        <img src="../css/img/regalo1.png" width="40">
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          0 </span> </button>`;
-    let total = 0;
-    
-        if (beneficios.length > 0) {
-            for (let beneficio of beneficios) {
-                total+=beneficio.cantidad;
-            }
-    
-            contenido = `<button type="button" class="btn btn-outline-ligh position-relative">
-        <img src="../css/img/regalo1.png" width="40">
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-          ${total} </span> </button>`;
-        }
-    
-        document.getElementById("beneficios_carrito").innerHTML = contenido;
-    }  
 
 function buscarbeneficio(id) {
     let beneficios = obtenerbeneficiosLS();
@@ -79,7 +52,6 @@ function agregarcarrito(id) {
     guardarbeneficioscarritoLS(beneficios_carrito);
     actualizarbtncarrito()
 }
-
 
 guardarbeneficiosLS(beneficios)
 actualizarbtncarrito()
