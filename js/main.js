@@ -1,12 +1,10 @@
-
-
 let h1 = document.createElement("h1")
-h1.innerHTML = "CREDI ONLINE"
+h1.innerHTML = "Credi online"
 
 const titulo = document.getElementById(tit)
 tit.appendChild(h1)
 
-h1.className = "text-bg-success p-3 position-relative text-center fs-1";
+h1.className = "p-3 position-relative text-center";
 
 //validacion de datos
 
@@ -62,3 +60,16 @@ formulario.submit();
 function limpiarFormulario() {
   document.getElementById("formulario").reset();
 }
+
+let boton = document.getElementById("boton")
+let con = true
+boton.addEventListener("click",function(){
+  let barra = document.querySelector(".barra");
+   if (con == true) {
+    barra.style.width="0"
+    con = false
+   } else {
+    barra.style.width="80%"
+    con = true
+   }
+})

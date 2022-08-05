@@ -6,14 +6,15 @@
     }
 
 .cabeza {
-    background-color: rgb(0, 255, 255);
+    background-color: rgb(130, 199, 222);
     text-align: center;
     align-items: center;
-    font-size: 8ch;
+    font-size: 4pc;
+    font-family: 'Noto Serif Display', serif;;
 }
 body {
-    background-color: rgb(190, 212, 190);
-    padding: 30px;
+    background-color: whitesmoke;
+    padding: 0;
 }
 .h2 {
     border: solid;
@@ -26,4 +27,54 @@ body {
     align-content: space-between;
     color: #000;
 }
-
+.redes2 {
+    padding: 0;
+    width: 100px;
+    position: fixed;
+    bottom: 200px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#boton {
+    padding: 10px;
+    color: white;
+    background: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.barra {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    transition: all .3s;
+}
+.li {
+    list-style: none;
+    width: 80%;
+}
+.li:hover {
+    width: 100%;
+    transition: all .3s;
+}
+a {
+    text-align: center;
+    padding: 10px;
+    display: block;
+    color: white;
+}
+.facebook {
+    background: #1877F2;
+}
+.twitter {
+    background:  #2962ff;
+}
+.instagram {
+    background: #B84CCC;
+}
+.google {
+    background: #ff0000;
+}
